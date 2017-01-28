@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>StartPage</title>
+<link rel="shortcut icon" href="favicon.png"></head><body style="font-family: Arial; background-color: rgb(202, 210, 167);">
+<br>
+<!------------------------------------------------------------------------>
+<!--------INICIO DO CALENDARIO--------------------------------------------->
+<div style="position: absolute; top: 33px; left: 415px;"><noscript><img src="chrome://editor/content/images/calendarSW.gif"></noscript>
+<script>
+function innerCalendarCode() {
+function montharr(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11) {
+this[0] = m0;
+this[1] = m1;
+this[2] = m2;
+this[3] = m3;
+this[4] = m4;
+this[5] = m5;
+this[6] = m6;
+this[7] = m7;
+this[8] = m8;
+this[9] = m9;
+this[10] = m10;
+this[11] = m11;
+}
+function calendar() {
+var monthNames = "JanFebMarAprMayJunJulAugSepOctNovDec";
+var today = new Date();
+var thisDay;
+var monthDays = new montharr(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+year = today.getYear();
+if (year <= 200) {
+year += 1900;
+}
+thisDay = today.getDate();
+if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+monthDays[1] = 29;
+}
+nDays = monthDays[today.getMonth()];
+firstDay = today;
+firstDay.setDate(1);
+testMe = firstDay.getDate();
+if (testMe == 2) {
+firstDay.setDate(0);
+}
+startDay = firstDay.getDay();
+document.writeln("<CENTER>");
+document.write("<TABLE BORDER='1' BGCOLOR=#CAD2A7>");
+document.write("<TR><TH COLSPAN=7>");
+document.write(monthNames.substring(today.getMonth() * 3, (today.getMonth() + 1) * 3));
+document.write(". ");
+document.write(year);
+document.write("<TR><TH>Dom<TH>Seg<TH>Ter<TH>Qua<TH>Qui<TH>Sex<TH>Sab");
+document.write("<TR>");
+column = 0;
+for (i = 0; i < startDay; i++) {
+document.write("<TD>");
+column++;
+}
+for (i = 1; i <= nDays; i++) {
+document.write("<TD>");
+if (i == thisDay) {
+document.write("<FONT COLOR=\"#FF0000\"><FONT SIZE=\"5\">");
+}
+document.write(i);
+if (i == thisDay) {
+document.write("</FONT>");
+}
+column++;
+if (column == 7) {
+document.write("<TR>");
+column = 0;
+}
+}
+document.write("</TABLE>");
+document.writeln("</CENTER>");
+}
+calendar();
+}
+innerCalendarCode();</script></div>
+
+<!--------FIM DO CALENDARIO----------------------------------------------------------------->
+<!-----------------------------------------------------------------------><br>
+<!----------------------INICIO DAS TRES DIV LADO A LADO COMO COLUNAS -------------------------->
+<!----------------------INICIO DA PRIMEIRA DIV------------------------------------------------->
+<div style="border: 3px double rgb(102, 102, 102); padding: 10px; margin-top: 0px; width: 12%; margin-bottom: 10px; float: left; margin-left: 10px;">
+<!-----------------ABRE LINK EM OUTRA ABA----------------------------->
+<a href="https://expresso.rs.gov.br/login.php?cd=1" target="_blank" style="margin: 10pt;">Expresso</a><br>
+<a href="https://mail.google.com/mail/u/0/?hl=pt-BR&amp;shva=1#inbox" target="_blank" style="margin: 10pt;">GMail</a><br>
+<a href="https://googledrive.com/host/0ByUg-f3-JHUGUW9LcFFvNTZZb1E/index.html" target="_blank" style="margin: 10pt;">Index</a><br>
+<a href="https://gatiboni.neocities.org/firefox_bookmarks.html" target="_blank" style="margin: 10pt;">FFBookmarks</a><br>
+<a href="https://gatiboni.neocities.org/chromebookmarks.html" target="_blank" style="margin: 10pt;">ChromeBookmarks</a><br>
+<a href="https://sites.google.com/site/ptrabeqt" target="_blank" style="margin: 10pt;">PtrabEqt</a><br>
+<a href="https://sites.google.com/site/gatiboni/reflexos" target="_blank" style="margin: 10pt;">Reflexos</a><br>
+<a href="https://sites.google.com/site/ptrabeqt/links" target="_blank" style="margin: 10pt;">Links</a><br>
+<a href="https://calendar.google.com/calendar/" target="_blank" style="margin: 10pt;">google_calendar</a><br>
+<a href="calendario_2015.html" target="_blank" style="margin: 10pt;">calendario_2015</a><br>
+<a href="calendario_2016.html" target="_blank" style="margin: 10pt;">calendario_2016</a><br>
+<a href="calendario_2017.html" target="_blank" style="margin: 10pt;">calendario_2017</a><br>
+<a href="dvd_index.html" target="_blank" style="margin: 10pt;">dvd_index</a><br>
+<a href="https://www.itextpad.com/gatiboni" target="_blank" style="margin: 10pt;">iTextPpad</a><br>
+<a href="https://www.itextpad.com/gatibonilinux" target="_blank" style="margin: 10pt;">iTextPad_linux</a><br>
+<a href="https://www.itextpad.com/gatibonitravel" target="_blank" style="margin: 10pt;">iTextPad_travel</a><br>
+<a href="travel.html" target="_blank" style="margin: 10pt;">travel</a><br>
+<a href="charger.html" target="_blank" style="margin: 10pt;">charger</a><br>
+<a href="https://photos.google.com" target="_blank" style="margin: 10pt;">google_photos</a><br>
+<a href="https://www.google.com.br/flights" target="_blank" style="margin: 10pt;">google_flights</a><br>
+<a href="https://www.kiwi.com/br/" target="_blank" style="margin: 10pt;">kiwi.com</a><br>
+<a href="" target="_blank" style="margin: 10pt;">n</a><br>
+<br>
+<!---------Observacao: target="_blank" abre em outra tab (aba) ------>
+<!---------FIM DOS LINKS-------------------------------------></div>
+<!-------------------FIM DA PRIMEIRA DIV E INICIO DA SEGUNDA DIV--------------------------->
+<div style="border: 3px double rgb(102, 102, 102); padding: 10px; margin-top: 0px; width: 12%; margin-bottom: 10px; float: left; margin-left: 10px;"><!----------------------------------------------><a href="http://www.feedly.com/i/latest" target="_blank" style="margin: 10pt;">feedly</a><br>
+<a href="http://www.clicrbs.com.br/rs/" target="_blank" style="margin: 10pt;">rbs</a><br>
+<a href="https://secweb.procergs.com.br/cpj2/logon.xhtml?windowId=091" target="_blank" style="margin: 10pt;">cpj</a><br>
+<a href="http://www.trt4.jus.br/portal/portal/trt4/home" target="_blank" style="margin: 10pt;">trt4</a><br>
+<a href="http://www.tst.jus.br" target="_blank" style="margin: 10pt;">tst</a><br>
+<a href="https://pje.trt4.jus.br/consultaprocessual/pages/consultas/ConsultaProcessual.seam" target="_blank" style="margin: 10pt;">pje_consulta</a><br>
+<a href="https://gatiboni.neocities.org/juris.html" target="_blank" style="margin: 10pt;">súmulas</a><br>
+<a href="https://gatiboni.neocities.org/juris_trts.html" target="_blank" style="margin: 10pt;">súmulas_trts</a><br>
+<a href="family/index.html" target="_blank" style="margin: 10pt;">family</a><br>
+<a href="cronologia.html" target="_blank" style="margin: 10pt;">cronologia</a><br>
+<a href="https://drive.google.com/drive/my-drive" target="_blank" style="margin: 10pt;">google_drive</a><br>
+<a href="https://meocloud.pt/home" target="_blank" style="margin: 10pt;">meocloud</a><br>
+<a href="https://www.box.com" target="_blank" style="margin: 10pt;">box</a><br>
+<a href="https://www.4shared.com" target="_blank" style="margin: 10pt;">4shared</a><br>
+<a href="https://www.mediafire.com/#myfiles" target="_blank" style="margin: 10pt;">mediafire</a><br>
+<a href="https://onedrive.live.com/?id=root&cid=22FD91C5C7DC38D5" target="_blank" style="margin: 10pt;">onedrive</a><br>
+<a href="http://www.google.com.br" target="_blank" style="margin: 10pt;">google</a><br>
+<a href="https://twitter.com/RadarBlitzPOA" target="_blank" style="margin: 10pt;">radarblitzpoa</a><br>
+<a href="https://neocities.org/dashboard" target="_blank" style="margin: 10pt;">neocities dashboard</a><br>
+<a href="" target="_blank" style="margin: 10pt;">n</a><br>
+<a href="https://gatiboni.gitlab.io/startpage/" target="_blank" style="margin: 10pt;">gitLab-startpage</a><br>
+<a href="https://gatiboni.github.io" target="_blank" style="margin: 10pt;">gitHub-startpage</a><br>
+
+<br>
+<!---------FIM DOS LINKS------------------------------------->
+<br>
+</div>
+<!-------------------FIM DA SEGUNDA DIV E INICIO DA TERCEIRA DIV--------------------------->
+<div style="border: 3px double rgb(102, 102, 102); padding: 10px; margin-top: 205px; width: 17%; margin-bottom: 10px; float: left; margin-left: 10px;">
+<!-----------------LEMBRETES----------------------------->
+<span style="font-size: 18px;"><font color="#1c3387">Tasks:</font></span>
+<br>
+<!---inicio do bold------><br>
+<b>
+<script>
+var date1 = new Date();
+var date2 = new Date("2/8/2017");
+var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+document.write(diffDays);
+</script>
+</b>
+dias at&eacute; 08/02/2017
+<br>
+<b>
+<script>
+var date1 = new Date();
+var date2 = new Date("3/14/2017");
+var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+document.write(diffDays);
+</script>
+</b>
+dias at&eacute; 14/03/2017
+<br>
+[_] <span style="font-weight: bold;">2=1+1</span><br>
+[_] insert f m <br>
+[_] id notebook d<br>
+[_] express, gmail, h, y<br>
+[_] <br>
+[_] <br>
+[_] <br>
+[_] <br>
+=&gt;( )
+<br>
+=&gt;[_]
+<!---fim do bold------><br>
+<!----------------------------------------------------------><br>
+<!---------FIM DA TERCEIRA COLUNA-------------------------------------></div>
+<!------------------FIM DA DIV DE TRES (3) COLUNAS---------------------------->
+<br>
+<!---------------------------------------------->
+<!--------TERMINA AQUI------------->
+<p><br>
+</p>
+<p><br>
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
